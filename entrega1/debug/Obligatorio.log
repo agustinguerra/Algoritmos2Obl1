@@ -1,0 +1,9 @@
+﻿  CasoDePrueba.cpp
+  IteradorPilaArray.cpp
+  IteradorPilaLista.cpp
+  main.cpp
+  PilaArray.cpp
+  PilaLista.cpp
+  Sistema.cpp
+  SistemaTemplates.cpp
+c:\users\agustin\downloads\entrega trabajo 30 06\entrega1\entrega1\iteradorpilaarray.cpp(34): error C4172: returning address of local variable or temporary: aux
