@@ -13,14 +13,14 @@
 
 template <class T>
 PilaLista<T>::PilaLista() {
-	lista = nullptr;
+	this->lista = NULL;
 	tamano = 0;
 	cantidadActual = 0;
 }
 
 template <class T>
 PilaLista<T>::PilaLista(int t) {
-	lista = nullptr;
+	this->lista = NULL;
 	tamano = t;
 	cantidadActual = 0;
 }
@@ -134,7 +134,8 @@ Iterador<T> PilaLista<T>::ObtenerIterador() const{
 	//PilaLista lista = new PilaLista(*this);
 	//lista->cantidadActual = this->cantidadActual;
 	//lista->tamano = this->tamano;
-	return new IteradorPilaLista<T>(ClonarLista(this->lista));
+	/*return new IteradorPilaLista<T>(ClonarLista(this->lista));*/
+	return new IteradorPilaLista<T>(this->lista);
 }
 
 #endif

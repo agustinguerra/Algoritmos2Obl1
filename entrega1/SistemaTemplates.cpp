@@ -114,7 +114,7 @@ int Sistema::Busqueda(const Array<T>& elementos, const T& elem, const Comparador
 template <class T>
 Puntero<Pila<T>> Sistema::CrearPilaSimplementeEncadenada(nat tamano)
 {
-	Puntero<Pila<T>> pila = new PilaLista<T>();
+	Puntero<Pila<T>> pila = new PilaLista<T>(tamano);
 	return pila;
 }
 

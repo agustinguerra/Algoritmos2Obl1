@@ -12,7 +12,7 @@ template <class T>
 class ListaPila {
 public:
 	T dato;
-	Puntero<ListaPila> siguiente;
+	Puntero<ListaPila<T>> siguiente;
 	ListaPila(const T&dato) : dato(dato), siguiente(nullptr) {  };
 };
 

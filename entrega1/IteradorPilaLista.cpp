@@ -32,12 +32,7 @@ IteradorPilaLista<T>::IteradorPilaLista(const Puntero<ListaPila<T>>& iterable) {
 //Poscondicion: devuelve true si la PilaLista tiene algun elemento. False en el caso contrario
 template <class T>
 bool IteradorPilaLista<T>::HayElemento() const {
-	if (this->pilaL == nullptr) {
-		return false;
-	}
-	else {
-		return true;
-	}
+	return this->pilaL != NULL;
 }
 
 //Precondicion: La PilaLsita no esta vacia
@@ -52,7 +47,7 @@ const T& IteradorPilaLista<T>::ElementoActual() const {
 //Poscondicion: avanza en la PilaLista
 template <class T>
 void IteradorPilaLista<T>::Avanzar() {
-	this->pilaL= this->pilaL->siguiente;
+		this->pilaL = this->pilaL->siguiente;
 }
 
 //Poscondicion: Reinicia el iterador a la posicion primera
@@ -65,7 +60,8 @@ void IteradorPilaLista<T>::Reiniciar() {
 //Poscondicion: clona el iterador
 template <class T>
 Puntero<Iteracion<T>> IteradorPilaLista<T>::Clonar() const{
-	return nullptr; 
+	Iteracion<T>* t = new IteradorPilaLista(*this);
+	return Puntero<Iteracion<T>>(t);
 }
 
 

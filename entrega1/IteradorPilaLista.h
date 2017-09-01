@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Pila.h"
+#include "Iterador.h"
 #include "PilaLista.h"
-#include "Iteracion.h"
 
 template <class T>
 class IteradorPilaLista : public Iteracion<T> {

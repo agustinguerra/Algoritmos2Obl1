@@ -6,4 +6,5 @@
   PilaLista.cpp
   Sistema.cpp
   SistemaTemplates.cpp
-c:\users\agustin\downloads\entrega trabajo 30 06\entrega1\entrega1\iteradorpilaarray.cpp(34): error C4172: returning address of local variable or temporary: aux
+  Obligatorio.vcxproj -> C:\Users\Agustin\Documents\Github\Algoritmos2Obl1\entrega1\Debug\Obligatorio.exe
+  Obligatorio.vcxproj -> Debug\Obligatorio.pdb (Full PDB)
