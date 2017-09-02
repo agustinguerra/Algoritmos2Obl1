@@ -4,6 +4,7 @@
 #include "Sistema.h"
 #include "PilaLista.h"
 #include "PilaArray.h"
+#include "ListaOrdImp.h"
 #include "Pila.h"
 #include "IteradorPilaLista.h"
 
@@ -160,7 +161,8 @@ bool Sistema::Iguales(const Puntero<Pila<T>>& pila1, const Puntero<Pila<T>>& pil
 template<class T>
 Puntero<ListaOrd<T>> Sistema::CrearListaOrdenadaEncadenada(const Comparador<T>& comp)
 {
-	return nullptr;
+	Puntero<ListaOrd<T>> lista = new ListaOrdImp<T>(comp);
+	return lista;
 }
 
 template <class T>

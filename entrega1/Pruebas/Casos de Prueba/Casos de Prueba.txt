@@ -165,8 +165,18 @@
 
 
 ----------------------------- Testeo --------------------------------
-  Comentario: La lista retornada por CrearListaOrdenadaEncadenada es nula
-  Retorno obtenido ERROR, se esperaba OK
+  Comentario: Se ingresó un elemento a la lista ordenada encadenada
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se eliminó un elemento de la lista ordenada encadenada
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se ingresa primero el 2 y después el 1 a la lista ordenada encadenada
+  Retorno obtenido OK
 ---------------------------------------------------------------------
 
 ----------------------------- Testeo --------------------------------
@@ -197,7 +207,7 @@
 ---------------------------------------------------------------------
 
   +------------------------------+
-    Pruebas Correctas : 16
-    Pruebas Incorrectas: 12
+    Pruebas Correctas : 19
+    Pruebas Incorrectas: 11
     Pruebas NI: 0
   +------------------------------+

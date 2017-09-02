@@ -42,6 +42,9 @@
     <ClCompile Include="ListaOrdImp.cpp">
       <Filter>Implementacion\Tads</Filter>
     </ClCompile>
+    <ClCompile Include="IteradorListaOrdImp.cpp">
+      <Filter>Implementacion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CasoDePrueba.h">
@@ -73,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="ListaOrdImp.h">
       <Filter>Implementacion\Tads</Filter>
+    </ClInclude>
+    <ClInclude Include="IteradorListaOrdImp.h">
+      <Filter>Implementacion</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
