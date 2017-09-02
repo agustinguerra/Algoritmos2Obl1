@@ -2,7 +2,7 @@
 #define LISTAORDIMP_CPP
 
 #include "ListaOrdImp.h"
-//#include "IteradorPilaArray.h"
+#include "IteradorListaOrdImp.h"
 
 //PRE: -
 //POS: Crea la lista ordenada
@@ -141,8 +141,7 @@ Puntero<ListaOrd<T>> ListaOrdImp<T>::Clon() const {
 //POS: Devuelve el iterador de la lista
 template <class T>
 Iterador<T> ListaOrdImp<T>::ObtenerIterador() const {
-	//return new IteradorListaImp<T>(*this);
-	return nullptr;
+	return new IteradorListaOrdImp<T>(this->lista);
 }
 
 

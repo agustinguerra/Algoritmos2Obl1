@@ -1,5 +1,4 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\agustin\documents\github\algoritmos2obl1\framework\debug\framework.idb' because it is being used by another process.
-  Array.cpp
+﻿  Array.cpp
   ArrayIteracion.cpp
   Puntero.cpp
   Cadena.cpp
@@ -19,4 +18,4 @@
   Prueba.cpp
   PruebaMemoria.cpp
   Tupla.cpp
-  Framework.vcxproj -> C:\Users\Agustin\Documents\GitHub\Algoritmos2Obl1\Framework\Debug\Framework.lib
+  Framework.vcxproj -> C:\Users\Usuario\Documents\GitHub\Algoritmos2Obl1\Framework\Debug\Framework.lib

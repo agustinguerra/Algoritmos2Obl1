@@ -50,7 +50,10 @@ bool Sistema::ExisteSuma(const Array<int>& elementos, int suma)
 	int esta = -1;
 	Ordenar<int>(copia, Comparador<int>::Default);
 	for (int t = 0; t < largo; t++) {
-		esta = Busqueda<int>(copia, suma - copia[t], Comparador<int>::Default);
+		Array<int> copiaSinEle(largo - 1);
+		Array<int>::Copiar(copia, 0, t, copiaSinEle, 0);
+		Array<int>::Copiar(copia, t + 1, copiaSinEle, t);
+		esta = Busqueda<int>(copiaSinEle, suma - copia[t], Comparador<int>::Default);
 		if (esta != -1) {
 			return true;
 		}

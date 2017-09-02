@@ -4,7 +4,6 @@
 #include "PilaLista.h"
 #include "IteradorPilaLista.h"
 #include "Puntero.h"
-#include "Puntero.h"
 #include <iostream>
 #include <assert.h>
 #include <typeinfo.h>

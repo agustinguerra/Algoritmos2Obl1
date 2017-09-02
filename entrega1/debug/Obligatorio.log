@@ -1,4 +1,6 @@
-﻿  CasoDePrueba.cpp
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\usuario\documents\github\algoritmos2obl1\entrega1\debug\sistema.obj' because it is being used by another process.
+  CasoDePrueba.cpp
+  IteradorListaOrdImp.cpp
   IteradorPilaArray.cpp
   IteradorPilaLista.cpp
   ListaOrdImp.cpp
@@ -7,5 +9,5 @@
   PilaLista.cpp
   Sistema.cpp
   SistemaTemplates.cpp
-  Obligatorio.vcxproj -> C:\Users\Agustin\Documents\GitHub\Algoritmos2Obl1\entrega1\Debug\Obligatorio.exe
+  Obligatorio.vcxproj -> C:\Users\Usuario\Documents\GitHub\Algoritmos2Obl1\entrega1\Debug\Obligatorio.exe
   Obligatorio.vcxproj -> Debug\Obligatorio.pdb (Full PDB)
