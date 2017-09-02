@@ -64,7 +64,83 @@ bool Sistema::ExisteSuma(const Array<int>& elementos, int suma)
 // Operacion 4: Cadenas
 Array<Cadena> Sistema::Split(const Cadena& origen, char delimiter)
 {
-	return Array<Cadena>();
+	
+	actual = true;
+	bool anterior = false;
+	int largoDeOrigen = origen.Largo;
+	Array<bool> validos(largoDeOrigen, true);
+
+	for (int i = 0; i < largoDeOrigen; i++)
+	{
+		if (origen[i] == delimiter)
+			validos[i] = false;
+	}
+	
+	int contadorDeArrays = 0;
+	for (int x = 0; x < (largoDeOrigen); x++)
+	{
+		actual = validos[x];
+
+		if (anterior != actual && actual)
+			contadorDeArrays++;
+
+		anterior = actual;
+	}
+
+	Array<Cadena> retorno(contadorDeArrays, "");
+	int indiceArraySplit = 0;
+	int desde = 0, hasta = 0;
+	for (nat i = 0; i < origen.Largo; i++)
+	{
+		if (validos[i])
+			hasta = i;
+		else
+		{
+			//Substring
+			retorno[indiceArraySplit] = origen.SubCadena(desde, hasta - desde + 1);
+			desde = i + 1;
+			indiceArraySplit++;
+		}
+	}
+	if (validos[origen.Largo - 1] && hasta == (origen.Largo - 1))
+		retorno[indiceArraySplit] = origen.SubCadena(desde, hasta - desde + 1);
+
+	return retorno;
+
+	//nat largoCadena = origen.Largo;
+	//int cantidadCadena = largoCadena;
+	//int contador = 0;
+	//int contadorAux = 0;
+	//for (int i = 0; i < cantidadCadena; i++) {
+	//	if (origen[i] != delimiter) {
+	//		contadorAux = contadorAux + 1;
+	//	}
+	//	else {
+	//		if (contadorAux > 0) {
+	//			contador = contador + 1;
+	//			contadorAux = 0;
+	//		}
+	//	}
+	//}
+	//if (contadorAux > 0) {
+	//	contador = contador + 1;
+	//}
+	//Array<Cadena> retorno(contador);
+	//for (int k = 0; k < contador; k++) {
+	//	retorno[k] = "";
+	//}
+	//contadorAux = 0;
+	//for (int j = 0; j < cantidadCadena; j++) {
+	//	if (origen[j] != delimiter) {
+	//		cout << origen[j];
+	//		Cadena ins = Cadena(new char (origen[j])+'/0');
+	//		retorno[contadorAux] = retorno[contadorAux] + ins;
+	//	}
+	//	else {
+	//		contadorAux = contadorAux + 1;
+	//	}
+	//}
+	//return retorno;
 }
 Cadena Sistema::Reverso(const Cadena& origen)
 {
