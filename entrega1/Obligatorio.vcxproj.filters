@@ -39,6 +39,9 @@
     <ClCompile Include="IteradorPilaArray.cpp">
       <Filter>Implementacion</Filter>
     </ClCompile>
+    <ClCompile Include="ListaOrdImp.cpp">
+      <Filter>Implementacion\Tads</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CasoDePrueba.h">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="IteradorPilaArray.h">
       <Filter>Implementacion</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaOrdImp.h">
+      <Filter>Implementacion\Tads</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,7 +4,6 @@
 #define PILALISTA_CPP
 
 #include "PilaLista.h"
-#include "Puntero.cpp"
 #include "Puntero.h"
 #include <iostream>
 #include <assert.h>
@@ -32,8 +31,7 @@ PilaLista<T>::PilaLista(int t) {
 template <class T>
 void PilaLista<T>::Push(const T& e) {
 	if (!(this->EstaLlena())) {
-		Puntero<ListaPila<T>> aux = Puntero<ListaPila<T>>();
-		aux->dato = e;
+		Puntero<ListaPila<T>> aux = new ListaPila<T>(e);
 		aux->siguiente = this->lista;
 		this->lista = aux;
 		this->cantidadActual = this->cantidadActual + 1;

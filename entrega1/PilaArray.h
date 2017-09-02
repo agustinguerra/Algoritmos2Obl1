@@ -3,7 +3,6 @@
 #include "Pila.h"
 #include "Array.h"
 #include "Puntero.h"
-#include "Puntero.cpp"
 #include <iostream>
 
 

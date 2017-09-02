@@ -134,7 +134,6 @@ bool Sistema::Iguales(const Puntero<Pila<T>>& pila1, const Puntero<Pila<T>>& pil
 {
 	Iterador<T> itPila1 = pila1->ObtenerIterador();
 	Iterador<T> itPila2 = pila2->ObtenerIterador();
-	itPila1.Avanzar();
 	while (itPila1.HayElemento()) {
 		T aux = itPila1.ElementoActual();
 		itPila1.Avanzar();

@@ -90,3 +90,114 @@
 ********************************************* Pruebas Operacion 3 OK *********************************************
 
 
+
+----------------------------- Testeo --------------------------------
+  Comentario: Las pilas son iguales
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Las pilas son distintas
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Las pilas son iguales
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+
+
+********************************************* Pruebas Operacion 4a OK *********************************************
+
+
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se esperaba T
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se esperaba d
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se esperaba s l
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se esperaba s h
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se esperaba mbres s
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se esperaba n m
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se esperaba rtales
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+
+
+********************************************* Pruebas Operacion 4b OK *********************************************
+
+
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se verifica la operacion 4b
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+
+
+********************************************* Pruebas Operacion 5 OK *********************************************
+
+
+
+----------------------------- Testeo --------------------------------
+  Comentario: La lista retornada por CrearListaOrdenadaEncadenada es nula
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: La lista ordenada encadenada retornada por CrearListaOrdenadaConArray es nula
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+
+
+********************************************* Pruebas Operacion 6 OK *********************************************
+
+
+
+----------------------------- Testeo --------------------------------
+  Comentario: La cola retornada por CrearColaPrioridad es nula
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+
+
+********************************************* Pruebas Operacion 7 OK *********************************************
+
+
+
+----------------------------- Testeo --------------------------------
+  Comentario: La salida esperada tiene más elementos que la obtenida
+  Retorno obtenido ERROR, se esperaba OK
+---------------------------------------------------------------------
+
+  +------------------------------+
+    Pruebas Correctas : 16
+    Pruebas Incorrectas: 12
+    Pruebas NI: 0
+  +------------------------------+

@@ -98,6 +98,7 @@
     <ClCompile Include="CasoDePrueba.cpp" />
     <ClCompile Include="IteradorPilaArray.cpp" />
     <ClCompile Include="IteradorPilaLista.cpp" />
+    <ClCompile Include="ListaOrdImp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PilaArray.cpp" />
     <ClCompile Include="PilaLista.cpp" />
@@ -110,6 +111,7 @@
     <ClInclude Include="IteradorPilaArray.h" />
     <ClInclude Include="IteradorPilaLista.h" />
     <ClInclude Include="ListaOrd.h" />
+    <ClInclude Include="ListaOrdImp.h" />
     <ClInclude Include="Pila.h" />
     <ClInclude Include="PilaArray.h" />
     <ClInclude Include="PilaLista.h" />

@@ -4,7 +4,6 @@
 
 #include "Pila.h"
 #include "Puntero.h"
-#include "Puntero.cpp"
 
 #include <iostream>
 

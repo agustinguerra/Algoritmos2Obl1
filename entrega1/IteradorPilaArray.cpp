@@ -15,6 +15,7 @@ IteradorPilaArray<T>::IteradorPilaArray(const Array<T>& iterable, int tamano, in
 	arrayPila = iterable;
 	this->tamano = tamano;
 	this->posicion = posicion;
+	this->inicio = posicion;
 }
 
 //Poscondicion: Devuelve un iterador a la PilaArray
@@ -27,10 +28,10 @@ IteradorPilaArray<T>::IteradorPilaArray(const Array<T>& iterable) {
 template <class T>
 bool IteradorPilaArray<T>::HayElemento() const {
 	if (posicion < 0) {
-		return true;
+		return false;
 	}
 	else {
-		return false;
+		return true;
 	}
 }
 
@@ -51,12 +52,14 @@ void IteradorPilaArray<T>::Avanzar() {
 //Poscondicion: reinicia al iterador a la posicion inicial
 template <class T>
 void IteradorPilaArray<T>::Reiniciar() {
+	this->posicion = this->inicio;
 }
 
 //Poscondicion: clona el iterador
 template <class T>
 Puntero<Iteracion<T>> IteradorPilaArray<T>::Clonar() const {
-	return nullptr;
+	Iteracion<T>* t = new IteradorPilaArray(*this);
+	return Puntero<Iteracion<T>>(t);
 }
 
 

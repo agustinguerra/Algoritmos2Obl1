@@ -29,6 +29,7 @@ private:
 	Array<T> arrayPila;
 	int tamano;
 	int posicion;
+	int inicio;
 };
 
 #include "IteradorPilaArray.cpp"

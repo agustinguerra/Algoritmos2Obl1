@@ -11,8 +11,7 @@ PilaArray<T>::PilaArray() {
 
 template <class T>
 PilaArray<T>::PilaArray(int t) {
-	Array<T> arr(t);
-	arrayDePila = arr;
+	arrayDePila = Array<T> (t);
 	tamano = t;
 	posicion = -1;
 }
