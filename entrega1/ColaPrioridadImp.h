@@ -20,12 +20,17 @@ template <class T, class P>
 class ColaPrioridadImp : public ColaPrioridad<T,P>
 {
 public:
+	//PRE: -
+	//POS: Destruye la cola prioridad
 	~ColaPrioridadImp() {}
-
+	//PRE: -
+	//POS: Construye la cola prioridad
 	ColaPrioridadImp();
-
+	//PRE: -
+	//POS: Construye la cola prioridad
 	ColaPrioridadImp(int tamano);
-
+	//PRE: -
+	//POS: Construye la cola prioridad
 	ColaPrioridadImp(int tam, const Comparador<T>& compP, const Comparador<P>& compT);
 
 	// PRE: -

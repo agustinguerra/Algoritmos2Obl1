@@ -3,12 +3,14 @@
 
 #include "PilaArray.h"
 #include "IteradorPilaArray.h"
-
+//PRE: -
+//POS: Construye la pila
 template <class T>
 PilaArray<T>::PilaArray() {
 
 }
-
+//PRE: -
+//POS: Construye la pila
 template <class T>
 PilaArray<T>::PilaArray(int t) {
 	arrayDePila = Array<T> (t);
@@ -53,6 +55,7 @@ void PilaArray<T>::Pop() {
 // PREDICADOS
 
 // Retorna true si y solo si la lista esta llena
+//PRE: -
 //Poscondicion: devuelve true si la pila esta llena
 template <class T>
 bool PilaArray<T>::EstaLlena() const {
@@ -65,6 +68,7 @@ bool PilaArray<T>::EstaLlena() const {
 }
 
 // Retorna true si y solo si la lista esta vacia
+// PRE: -
 //Poscondicion: devuelve true si la pila esta vacia
 template <class T>
 bool PilaArray<T>::EstaVacia() const {
@@ -91,6 +95,7 @@ Puntero<Pila<T>> PilaArray<T>::Clon() const {
 }
 
 //Retorna el iterador para recorrer la pila
+//PRE: -
 //Poscondicion: devuelve el iterador de la pila
 template <class T>
 Iterador<T> PilaArray<T>::ObtenerIterador() const {

@@ -8,7 +8,7 @@
 #include <assert.h>
 #include <typeinfo.h>
 
-
+//Pre: -
 //Poscondicion: construye el iterador a la ListaOrdArray
 template <class T>
 IteradorListaOrdArray<T>::IteradorListaOrdArray(const Array<T>& iterable, int tamano, int posicion) {
@@ -17,6 +17,7 @@ IteradorListaOrdArray<T>::IteradorListaOrdArray(const Array<T>& iterable, int ta
 	this->posicion = posicion;
 	this->inicio = posicion;
 }
+//Pre: -
 //Poscondicion: devuelve true si la ListaOrdArray tiene algun elemento. False en el caso contrario
 template <class T>
 bool IteradorListaOrdArray<T>::HayElemento() const {
@@ -39,11 +40,13 @@ template <class T>
 void IteradorListaOrdArray<T>::Avanzar() {
 	this->posicion = this->posicion - 1;
 }
+//Pre: -
 //Poscondicion: Reinicia el iterador a la posicion primera
 template <class T>
 void IteradorListaOrdArray<T>::Reiniciar() {
 	this->posicion = this->inicio;
 }
+//Pre: -
 //Poscondicion: clona el iterador
 template <class T>
 Puntero<Iteracion<T>> IteradorListaOrdArray<T>::Clonar() const {

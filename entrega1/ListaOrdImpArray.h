@@ -10,8 +10,11 @@ class ListaOrdImpArray : public ListaOrd<T> {
 public:
 	~ListaOrdImpArray() {};
 
+	//PRE: -
+	//POS: Construye la lista ordenada
 	ListaOrdImpArray(const Comparador<T>& comp);
-
+	//PRE: -
+	//POS: Construye la lista ordenada
 	ListaOrdImpArray();
 
 	// PRE: Está ordenada

@@ -4,7 +4,8 @@
 #include "ListaOrdImpArray.h"
 #include "IteradorListaOrdArray.h"
 
-
+//PRE: -
+//POS: Construye la lista ordenada
 template <class T>
 ListaOrdImpArray<T>::ListaOrdImpArray(const Comparador<T>& comp) {
 	arrayDeLista = Array<T>(100);
@@ -12,7 +13,8 @@ ListaOrdImpArray<T>::ListaOrdImpArray(const Comparador<T>& comp) {
 	this->posicion = -1;
 	this->tamano = 100;
 }
-
+//PRE: -
+//POS: Construye la lista ordenada
 template <class T>
 ListaOrdImpArray<T>::ListaOrdImpArray() {
 }

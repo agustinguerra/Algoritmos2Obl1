@@ -16,7 +16,8 @@ template <class T>
 class ListaOrdImp : public ListaOrd<T> {
 public:
 	~ListaOrdImp() {};
-
+	//PRE: -
+	//POS: Construye la lista ordenada
 	ListaOrdImp(const Comparador<T>& comp);
 
 	// PRE: Está ordenada

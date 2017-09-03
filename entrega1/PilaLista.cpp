@@ -10,6 +10,8 @@
 #include <typeinfo.h>
 #include "IteradorPilaLista.h"
 
+//Pre: -
+//Pos: construye la pila lista
 template <class T>
 PilaLista<T>::PilaLista() {
 	this->lista = NULL;
@@ -17,6 +19,8 @@ PilaLista<T>::PilaLista() {
 	cantidadActual = 0;
 }
 
+//Pre: -
+//Pos: construye la pila lista
 template <class T>
 PilaLista<T>::PilaLista(int t) {
 	this->lista = NULL;
@@ -75,6 +79,7 @@ bool PilaLista<T>::EstaLlena() const {
 }
 
 // Retorna true si y solo si la lista esta vacia
+//Pre: -
 //Precondicion: devuelve true si la pila esta vacia, false si no lo esta.
 template <class T>
 bool PilaLista<T>::EstaVacia() const {
@@ -100,15 +105,17 @@ PilaLista<T>::PilaLista(const PilaLista<T>&pila) {
 }
 
 //Retorna un clon de la pila que no comparte memoria con ella
+//Pre: -
+//Pos: devuelve un clon que no comparte memoria
 template <class T>
 Puntero<Pila<T>> PilaLista<T>::Clon() const {
 	Puntero<PilaLista<T>> pilaDevolver = new PilaLista(*this);
 	return pilaDevolver;
-	/*return nullptr;*/
 }
 
 
 //Clonador de la lista de la pila
+//PRE: -
 //Poscondicion: devuelve un clon de la lista que no comparte memoria
 template <class T>
 Puntero<ListaPila<T>> PilaLista<T>::ClonarLista(const Puntero<ListaPila<T>>& original) const {
@@ -124,15 +131,10 @@ Puntero<ListaPila<T>> PilaLista<T>::ClonarLista(const Puntero<ListaPila<T>>& ori
 }
 
 //Retorna el iterador para recorrer la pila
+//PRE: -
 //Poscondicion: retorna el iterador para recorrer la pila
 template <class T>
 Iterador<T> PilaLista<T>::ObtenerIterador() const{
-	//return Iterador<T> (new IteradorPilaLista<T>(lista,this->tamano,this->cantidadActual));
-	//return new IteradorPilaLista<T>(*lista, this->tamano, this->cantidadActual);
-	//PilaLista lista = new PilaLista(*this);
-	//lista->cantidadActual = this->cantidadActual;
-	//lista->tamano = this->tamano;
-	/*return new IteradorPilaLista<T>(ClonarLista(this->lista));*/
 	return new IteradorPilaLista<T>(this->lista);
 }
 

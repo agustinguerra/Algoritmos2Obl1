@@ -8,7 +8,7 @@
 #include <assert.h>
 #include <typeinfo.h>
 
-
+//Pre: -
 //Poscondicion: construye el iterador a la ListaOrdImp
 template <class T>
 IteradorListaOrdImp<T>::IteradorListaOrdImp(const NodoLista<T>& iterable, int cantidadActual) {
@@ -16,13 +16,14 @@ IteradorListaOrdImp<T>::IteradorListaOrdImp(const NodoLista<T>& iterable, int ca
 	this->listaL = iterable;
 	this->cantidadActual = cantidadActual;
 }
+//Pre: -
 //Poscondicion: construye el iterador a la ListaOrdImp
 template <class T>
 IteradorListaOrdImp<T>::IteradorListaOrdImp(const Puntero<NodoLista<T>>& iterable) {
 	this->inicio = iterable;
 	this->listaL = iterable;
 }
-
+//Pre: -
 //Poscondicion: devuelve true si la ListaOrdImp tiene algun elemento. False en el caso contrario
 template <class T>
 bool IteradorListaOrdImp<T>::HayElemento() const {
@@ -45,11 +46,13 @@ template <class T>
 void IteradorListaOrdImp<T>::Avanzar() {
 	this->listaL = this->listaL->siguiente;
 }
+//Pre: -
 //Poscondicion: Reinicia el iterador a la posicion primera
 template <class T>
 void IteradorListaOrdImp<T>::Reiniciar() {
 	this->listaL = this->inicio;
 }
+//Pre: -
 //Poscondicion: clona el iterador
 template <class T>
 Puntero<Iteracion<T>> IteradorListaOrdImp<T>::Clonar() const {

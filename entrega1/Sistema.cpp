@@ -12,6 +12,7 @@ Sistema::~Sistema()
 
 // Ejercicio 1: ordenamiento
 //Al saber la cantidad de elementos, puedo transformarlo en orden n. El siguiente algoritmo recorre el array original, y lo va guardando en uno nuevo de tamaño fijo que permite re armar el original recorriendolo de manera lineal luego.
+//PRE: -
 //Precondiciones: numeros pares naturales menores a 6000. 
 void Sistema::OrdenarEnteros(Array<int>& elementos)
 {
@@ -39,6 +40,7 @@ void Sistema::OrdenarEnteros(Array<int>& elementos)
 
 // Operación 2: Búsqueda
 //Primero lo ordeno con el algoritmo ya implementado, tiempo n log n. Luego, para cada elemento con busqueda binaria busco la suma. Si la encuentro devuelvo true, sino no.
+//PRE -
 //Poscondiciones: devuelve false si no lo encuentra, o true si lo encuentra
 bool Sistema::ExisteSuma(const Array<int>& elementos, int suma)
 {
@@ -62,6 +64,8 @@ bool Sistema::ExisteSuma(const Array<int>& elementos, int suma)
 }
 
 // Operacion 4: Cadenas
+//PRE: -
+//POS: devuelve el array de cadenas resultante de separar a la cadena original por las ocurrencias del caracter ‘s’
 Array<Cadena> Sistema::Split(const Cadena& origen, char delimiter)
 {
 	nat largoCadena = origen.Largo;
@@ -101,6 +105,8 @@ Array<Cadena> Sistema::Split(const Cadena& origen, char delimiter)
 	}	
 	return retorno;
 }
+//PRE: -
+//POS: revierte el orden de las palabras en una oracion.
 Cadena Sistema::Reverso(const Cadena& origen)
 {
 	Cadena retorno = "";

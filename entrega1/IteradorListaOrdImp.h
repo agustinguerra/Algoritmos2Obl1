@@ -21,8 +21,10 @@ public:
 	//Precondicion: La ListaOrdImp no esta vacia
 	//Poscondicion: avanza en la ListaOrdImp
 	void Avanzar() override;
+	//Pre: -
 	//Poscondicion: Reinicia el iterador a la posicion primera
 	void Reiniciar() override;
+	//Pre: -
 	//Poscondicion: clona el iterador
 	Puntero<Iteracion<T>> Clonar() const  override;
 

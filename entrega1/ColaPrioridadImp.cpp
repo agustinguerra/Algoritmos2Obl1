@@ -2,22 +2,26 @@
 #define COLAPRIORIDADIMP_CPP
 
 #include "ColaPrioridadImp.h"
-//#include "IteradorColaPrioridad.h"
+#include "IteradorColaPrioridad.h"
 
-
+//PRE: -
+//POS: Construye la cola prioridad
 template <class T, class P>
 ColaPrioridadImp<T, P>::ColaPrioridadImp() {
 	this->tope = 0;
 	this->tamano = 0;
 }
 
-
+//PRE: -
+//POS: Construye la cola prioridad
 template <class T, class P>
 ColaPrioridadImp<T, P>::ColaPrioridadImp(int tam) {
 	this->tope = tam;
 	this->tamano = 0;
 }
 
+//PRE: -
+//POS: Construye la cola prioridad
 template <class T, class P>
 ColaPrioridadImp<T, P>::ColaPrioridadImp(int tam, const Comparador<T>& compP, const Comparador<P>& compT) {
 	this->tamano = tam;
@@ -132,6 +136,8 @@ bool ColaPrioridadImp<T, P>::EstaLlena() const {
 	}
 }
 
+//PRE: -
+//POS: Devuelve un puntero a la lista de nodos de PQ
 template <class T, class P>
 Puntero<NodoListaPQ<T,P>> ColaPrioridadImp<T, P>::ClonarPQ(const Puntero<NodoListaPQ<T,P>>& original) const {
 	if (original == nullptr) {
@@ -159,10 +165,11 @@ Puntero<ColaPrioridad<T, P>> ColaPrioridadImp<T, P>::Clon() const {
 	return pqDevolver;
 }
 
+//PRE: -
+//POS: Construye y devuelve el iterador de cola prioridad
 template <class T, class P>
 Iterador<T> ColaPrioridadImp<T, P>::ObtenerIterador() const {
-	//return new IteradorPQ<T>(this->pq);
-	return nullptr;
+	return new IteradorColaPrioridad<T,P>(this->pq,this->tope,this->tamano);
 }
 
 #endif

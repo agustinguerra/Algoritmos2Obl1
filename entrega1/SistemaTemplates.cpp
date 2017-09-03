@@ -9,7 +9,8 @@
 #include "Pila.h"
 #include "ColaPrioridadImp.h"
 
-
+//PRE:  - 
+//POS: Hace el merge 
 template <class T>
 void merge(Array<T>& elementos, int l, int m, int r, const Comparador<T>& comp)
 {
@@ -59,7 +60,8 @@ void merge(Array<T>& elementos, int l, int m, int r, const Comparador<T>& comp)
 }
 
 
-
+//PRE:  - 
+//POS: Hace el merge 
 template <class T>
 void mergeSortAux(Array<T>& elementos, int l, int r, const Comparador<T>& comp)
 {
@@ -76,13 +78,15 @@ void mergeSortAux(Array<T>& elementos, int l, int r, const Comparador<T>& comp)
 
 // Ejercicio 1: ordenamiento
 //Se implemento un Merge Sort standard para ordenar y cumplir con los tiempos
+//Pre: 
 //Poscondicion: ordena el arreglo
 template <class T>
 void Sistema::Ordenar(Array<T>& elementos, const Comparador<T>& comp)
 {
 	mergeSortAux(elementos,0, elementos.ObtenerLargo()-1, comp);
 }
-
+//PRE:  - 
+//POS: Busca el elemento, si no esta devuelve -1
 template <class T>
 int busquedaBinaria(const Array<T>& elementos, int i, int d, const T& t, const Comparador<T>& comp)
 {
@@ -101,6 +105,7 @@ int busquedaBinaria(const Array<T>& elementos, int i, int d, const T& t, const C
 
 // Operación 2: Búsqueda
 //Se implemento una BS para cumplir con los tiempos
+//PRE: -
 //Precondiciones: El array TIENE que estar ordenado. No lo chequeo porque es perjudicial para los tiempos
 template <class T>
 int Sistema::Busqueda(const Array<T>& elementos, const T& elem, const Comparador<T>& comp)
@@ -112,6 +117,7 @@ int Sistema::Busqueda(const Array<T>& elementos, const T& elem, const Comparador
 
 // Operación 3: TAD Pila
 //Creador de Pila con lista simplemente encadenada
+//PRE: -
 //Poscondicion: devuelve una pila con una lista simplemente encadenada
 template <class T>
 Puntero<Pila<T>> Sistema::CrearPilaSimplementeEncadenada(nat tamano)
@@ -121,6 +127,7 @@ Puntero<Pila<T>> Sistema::CrearPilaSimplementeEncadenada(nat tamano)
 }
 
 //Creador de Pila con array
+//PRE: -
 //Poscondicion: devuelve una pila con un array
 template <class T>
 Puntero<Pila<T>> Sistema::CrearPilaArray(nat tamano)
@@ -129,7 +136,7 @@ Puntero<Pila<T>> Sistema::CrearPilaArray(nat tamano)
 	return pila;
 }
 
-
+//PRE: -
 //Poscondiciones: Devuelvo TRUE si son iguales, o FALSE si no lo son
 template <class T>
 bool Sistema::Iguales(const Puntero<Pila<T>>& pila1, const Puntero<Pila<T>>& pila2, const Comparador<T>& comp)
@@ -159,6 +166,8 @@ bool Sistema::Iguales(const Puntero<Pila<T>>& pila1, const Puntero<Pila<T>>& pil
 }
 
 // Operación 5: Lista Ordenada
+//PRE:  - 
+//POS: Crea la lista ordenada
 template<class T>
 Puntero<ListaOrd<T>> Sistema::CrearListaOrdenadaEncadenada(const Comparador<T>& comp)
 {
@@ -166,12 +175,15 @@ Puntero<ListaOrd<T>> Sistema::CrearListaOrdenadaEncadenada(const Comparador<T>& 
 	return lista;
 }
 
+//PRE:  - 
+//POS: Crea la lista ordenada con array
 template <class T>
 Puntero<ListaOrd<T>> Sistema::CrearListaOrdenadaConArray(const Comparador<T>& comp)
 {
 	Puntero<ListaOrd<T>> lista = new ListaOrdImpArray<T>(comp);
 	return lista;
 }
+//PRE: -
 //Poscondiciones: Devuelve true si ambas listas son iguales. Sino false.
 template <class T>
 bool Sistema::ListasSonIguales(const Puntero<ListaOrd<T>>& lista1, const Puntero<ListaOrd<T>>& lista2, const Comparador<T>& comp)
@@ -194,6 +206,8 @@ bool Sistema::ListasSonIguales(const Puntero<ListaOrd<T>>& lista1, const Puntero
 }
 
 // Operación 6: Tad Cola de Prioridad
+//PRE:  - 
+//POS: Crea la cola prioridad
 template<class T, class P>
 Puntero<ColaPrioridad<T, P>> Sistema::CrearColaPrioridad(nat tamano)
 {
@@ -201,6 +215,8 @@ Puntero<ColaPrioridad<T, P>> Sistema::CrearColaPrioridad(nat tamano)
 	return pq;
 }
 
+//PRE:  - 
+//POS: Swapea los dos elementos
 template <class T>
 void swapT(T& xN, T& yN)
 {
@@ -209,6 +225,9 @@ void swapT(T& xN, T& yN)
 	yN = temp;
 }
 
+//PRE:  - 
+//POS: Ordena el array de mayor a menor
+//Es un bubble sort
 template <class T>
 void ordenarArray(Array<T> original, const Comparador<T>& comp) { 
 	int largoArray = original.Largo;
@@ -229,6 +248,8 @@ void ordenarArray(Array<T> original, const Comparador<T>& comp) {
 
 
 // Operación 7: Ejercicio con Cola de Prioridad
+//PRE:  - 
+//POS: devuelve los n elementos mayores de todos los array en forma ordenada de mayor a menor usando la cola de prioridad implementada en la parte anterior.
 template <class T>
 Array<T> Sistema::MayoresN(Array<Array<T>> datos, const Comparador<T>& comp, nat n)
 {

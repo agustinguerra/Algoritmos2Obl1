@@ -54,6 +54,9 @@
     <ClCompile Include="ColaPrioridadImp.cpp">
       <Filter>Implementacion\Tads</Filter>
     </ClCompile>
+    <ClCompile Include="IteradorColaPrioridad.cpp">
+      <Filter>Implementacion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CasoDePrueba.h">
@@ -97,6 +100,9 @@
     </ClInclude>
     <ClInclude Include="ColaPrioridadImp.h">
       <Filter>Implementacion\Tads</Filter>
+    </ClInclude>
+    <ClInclude Include="IteradorColaPrioridad.h">
+      <Filter>Implementacion</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
