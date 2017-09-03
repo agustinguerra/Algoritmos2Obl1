@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CasoDePrueba.cpp" />
+    <ClCompile Include="ColaPrioridadImp.cpp" />
     <ClCompile Include="IteradorListaOrdArray.cpp" />
     <ClCompile Include="IteradorListaOrdImp.cpp" />
     <ClCompile Include="IteradorPilaArray.cpp" />
@@ -111,6 +112,7 @@
   <ItemGroup>
     <ClInclude Include="CasoDePrueba.h" />
     <ClInclude Include="ColaPrioridad.h" />
+    <ClInclude Include="ColaPrioridadImp.h" />
     <ClInclude Include="IteradorListaOrdArray.h" />
     <ClInclude Include="IteradorListaOrdImp.h" />
     <ClInclude Include="IteradorPilaArray.h" />

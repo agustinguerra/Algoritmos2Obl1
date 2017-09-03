@@ -7,6 +7,7 @@
 #include "ListaOrdImp.h"
 #include "ListaOrdImpArray.h"
 #include "Pila.h"
+#include "ColaPrioridadImp.h"
 
 
 template <class T>
@@ -196,7 +197,34 @@ bool Sistema::ListasSonIguales(const Puntero<ListaOrd<T>>& lista1, const Puntero
 template<class T, class P>
 Puntero<ColaPrioridad<T, P>> Sistema::CrearColaPrioridad(nat tamano)
 {
-	return nullptr;
+	Puntero<ColaPrioridad<T,P>> pq = new ColaPrioridadImp<T,P>(tamano);
+	return pq;
+}
+
+template <class T>
+void swapT(T& xN, T& yN)
+{
+	T temp = xN;
+	xN = yN;
+	yN = temp;
+}
+
+template <class T>
+void ordenarArray(Array<T> original, const Comparador<T>& comp) { 
+	int largoArray = original.Largo;
+	int bandera = 1;
+	for (int i = 1; (i <= largoArray) && bandera; i++)
+	{
+		int bandera = 0;
+		for (int j = 0; j < (largoArray - 1); j++)
+		{
+			if (comp.Comparar(original[j + 1],original[j]) == MAYOR)    
+			{
+				swapT(original[j], original[j + 1]);
+				bandera = 1;             
+			}
+		}
+	}
 }
 
 
@@ -204,7 +232,22 @@ Puntero<ColaPrioridad<T, P>> Sistema::CrearColaPrioridad(nat tamano)
 template <class T>
 Array<T> Sistema::MayoresN(Array<Array<T>> datos, const Comparador<T>& comp, nat n)
 {
-	return Array<T>();
+	int tamanoArray = datos.Largo * datos[0].Largo;
+	Puntero<ColaPrioridad<T, int>> pq = new ColaPrioridadImp<T, int>(tamanoArray + 1, Comparador<int>::Default, comp);
+	int filas = datos.Largo;
+	int columnas = datos[0].Largo;
+	for (int i = 0; i < filas; i++) {
+		for (int j = 0; j < columnas; j++) {
+			pq->Encolar(datos[i][j], j);
+		}
+	}
+	Array<T> retorno(n);
+	int nInt = n;
+	for (int k = 0; k < nInt; k++) {
+		retorno[k] = pq->Desencolar();
+	}
+	ordenarArray(retorno, comp);
+	return retorno;
 }
 
 #endif

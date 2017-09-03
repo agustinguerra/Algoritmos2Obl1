@@ -216,8 +216,48 @@
 
 
 ----------------------------- Testeo --------------------------------
-  Comentario: La cola retornada por CrearColaPrioridad es nula
-  Retorno obtenido ERROR, se esperaba OK
+  Comentario: Se ingresó un elemento el 2 con prioridad 20 a la cola
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: El elemento retornado por Cabeza() y por Desencolar() debe ser el mismo
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: El elemento retornado por Cabeza() y por Desencolar() debe ser el mismo
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se obtuvo 3 y se esperaba 3
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se obtuvo 2 y se esperaba 2
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se obtuvo 1 y se esperaba 1
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se obtuvo 0 y se esperaba 0
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Los obtenidos deben estar en el mismo orden que los esperados(0 1 2 3)
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se eliminaron todos los elementos de la cola de prioridad
+  Retorno obtenido OK
 ---------------------------------------------------------------------
 
 
@@ -227,12 +267,37 @@
 
 
 ----------------------------- Testeo --------------------------------
-  Comentario: La salida esperada tiene más elementos que la obtenida
-  Retorno obtenido ERROR, se esperaba OK
+  Comentario: Se obtuvo 47 y se esperaba 47
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se obtuvo 45 y se esperaba 45
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se obtuvo 40 y se esperaba 40
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se obtuvo 35 y se esperaba 35
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: Se obtuvo 30 y se esperaba 30
+  Retorno obtenido OK
+---------------------------------------------------------------------
+
+----------------------------- Testeo --------------------------------
+  Comentario: La salida esperada debe ser la misma que la obtenida
+  Retorno obtenido OK
 ---------------------------------------------------------------------
 
   +------------------------------+
-    Pruebas Correctas : 33
-    Pruebas Incorrectas: 2
+    Pruebas Correctas : 48
+    Pruebas Incorrectas: 0
     Pruebas NI: 0
   +------------------------------+
