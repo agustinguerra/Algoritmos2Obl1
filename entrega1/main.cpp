@@ -9,7 +9,6 @@ Puntero<Sistema> Inicializar()
 }
 
 
-
 void imprimirLista(Iterador<int>& iter) {
 	while (iter.HayElemento()) {
 		cout << iter.ElementoActual() << ", ";
@@ -81,7 +80,7 @@ void test_lista_encadenada()
 
 void test_pila_array()
 {
-	Puntero<Pila<int>> pila = new PilaArray<int>(6);
+	Puntero<Pila<int>> pila = new PilaArray<int>(1000);
 	std::cout << "Esta vacia la pila ? (Si) " << pila->EstaVacia() << endl;
 
 	std::cout << "Pusheando 1,2,3,4,5 ..." << endl;
@@ -189,6 +188,9 @@ void test_pila_iterador_array()
 	std::cout << "Popped todo, esta vacia la pila? si" << pila->EstaVacia() << endl;;
 }
 
+
+
+
 void main()
 {
 	Puntero<ConductorPrueba> cp = new ConductorPrueba();
@@ -201,8 +203,9 @@ void main()
 	 //test_lista_encadenada();
 	 //test_pila_array();
 	 //test_pila_lista();
-	// test_pila_iterador_lista();
-	// test_pila_iterador_array();
-	// test_pqueue_lista();
+	 //test_pila_iterador_lista();
+	 //test_pila_iterador_array();
+
+
 	system("pause");
 }

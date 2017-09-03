@@ -1,12 +1,14 @@
 ﻿  CasoDePrueba.cpp
+  IteradorListaOrdArray.cpp
   IteradorListaOrdImp.cpp
   IteradorPilaArray.cpp
   IteradorPilaLista.cpp
   ListaOrdImp.cpp
+  ListaOrdImpArray.cpp
   main.cpp
   PilaArray.cpp
   PilaLista.cpp
   Sistema.cpp
   SistemaTemplates.cpp
-  Obligatorio.vcxproj -> C:\Users\Usuario\Documents\GitHub\Algoritmos2Obl1\entrega1\Debug\Obligatorio.exe
+  Obligatorio.vcxproj -> C:\Users\Agustin\Documents\GitHub\Algoritmos2Obl1\entrega1\Debug\Obligatorio.exe
   Obligatorio.vcxproj -> Debug\Obligatorio.pdb (Full PDB)

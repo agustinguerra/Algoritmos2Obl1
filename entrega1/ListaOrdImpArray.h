@@ -3,13 +3,16 @@
 #include "ListaOrd.h"
 #include "Puntero.h"
 #include <iostream>
+#include "Array.h"
 
 template <class T>
 class ListaOrdImpArray : public ListaOrd<T> {
 public:
-	~ListaOrdImp() {};
+	~ListaOrdImpArray() {};
 
 	ListaOrdImpArray(const Comparador<T>& comp);
+
+	ListaOrdImpArray();
 
 	// PRE: Está ordenada
 	// POS: e pertenece a la lista. La lista está ordenada y contiene todos los elementos que había en la lista antes de la inserción

@@ -5,8 +5,8 @@
 #include "PilaLista.h"
 #include "PilaArray.h"
 #include "ListaOrdImp.h"
+#include "ListaOrdImpArray.h"
 #include "Pila.h"
-#include "IteradorPilaLista.h"
 
 
 template <class T>
@@ -168,28 +168,28 @@ Puntero<ListaOrd<T>> Sistema::CrearListaOrdenadaEncadenada(const Comparador<T>& 
 template <class T>
 Puntero<ListaOrd<T>> Sistema::CrearListaOrdenadaConArray(const Comparador<T>& comp)
 {
-	return nullptr;
+	Puntero<ListaOrd<T>> lista = new ListaOrdImpArray<T>(comp);
+	return lista;
 }
 //Poscondiciones: Devuelve true si ambas listas son iguales. Sino false.
 template <class T>
 bool Sistema::ListasSonIguales(const Puntero<ListaOrd<T>>& lista1, const Puntero<ListaOrd<T>>& lista2, const Comparador<T>& comp)
 {
-	//bool retorno = false;
-	//if (lista1->Largo() == lista2->Largo()) {
-	//	retorno = true;
-	//	nat largo = lista1->Largo();
-	//	for (nat i = 0; i < largo; i++) {
-	//		if (comp.Comparar(lista1->Obtener(i), lista2->Obtener(i) == IGUALES)) {}
-	//		else {
-	//			return false;
-	//		}
-	//	}
-	//}
-	//else {
-	//	return false;
-	//}
-	//return retorno;
-	return false;
+	bool retorno = false;
+	if (lista1->Largo() == lista2->Largo()) {
+		retorno = true;
+		nat largo = lista1->Largo();
+		for (nat i = 0; i < largo; i++) {
+			if (comp.Comparar(lista1->Obtener(i), lista2->Obtener(i)) == IGUALES) {}
+			else {
+				return false;
+			}
+		}
+	}
+	else {
+		return false;
+	}
+	return retorno;
 }
 
 // Operación 6: Tad Cola de Prioridad
